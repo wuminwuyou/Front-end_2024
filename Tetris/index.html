@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            /* 水平居中 */
+            align-items: flex-start;
+            /* 垂直居中 */
+            height: 100vh;
+            /* 让内容垂直居中 */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* 垂直方向布局 */
+            align-items: flex-start;
+            /* 水平居中 */
+        }
+
+        h2 {
+            color: white;
+            width: 100%;
+            float: left;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .table-container {
+            position: relative;
+            /* 相对定位，使绝对定位的元素基于此容器 */
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 20px;
+            background-color: #303030;
+        }
+
+        td {
+            border: 0.01px solid #333333;
+            width: 30px;
+            height: 30px;
+        }
+
+        .c1 {
+            /* "S" */
+            background-color: red;
+        }
+
+        .c2 {
+            /* "Z" */
+            background-color: green;
+        }
+
+        .c3 {
+            /* "J" */
+            background-color: rgb(255, 0, 255);
+        }
+
+        .c4 {
+            /* "L" */
+            background-color: orange;
+        }
+
+        .c5 {
+            /* "T" */
+            background-color: purple;
+        }
+
+        .c6 {
+            /* "I" */
+            background-color: #0ff;
+        }
+
+        .c7 {
+            /* "O" */
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="score">分数：0</h2>
+        <h2 id="level">level：1</h2>
+        <div class="table-container">
+            <table>
+                <!-- 表格内容 -->
+            </table>
+        </div>
+        <h2>按Enter键开始游戏</h2>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/Block.js"></script>
+    <script>
+        var game = new Game();
+    </script>
+</body>
